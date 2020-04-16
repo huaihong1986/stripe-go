@@ -249,7 +249,7 @@ import (
 )
 
 config := &stripe.BackendConfig{
-    MaxNetworkRetries: 2,
+    MaxNetworkRetries: stripe.Int64(2),
 }
 
 sc := &client.API{}
@@ -330,7 +330,7 @@ You can disable this behavior if you prefer:
 
 ```go
 config := &stripe.BackendConfig{
-	EnableTelemetry: false,
+	EnableTelemetry: stripe.Bool(false),
 }
 ```
 
